@@ -52,7 +52,7 @@ def extract_data():
         # <tr>의 <td> 값이 2개이고, 각각의 값은 country, cases이다.
         country = country.text
         patient = cases.text.split("명")[0]
-        if "사망" in cases.text:  # 사망자 없는 경우
+        if "사망" in cases.text:  # 사망자 있는 경우
             deceased = cases.text.split(" ")[-1].strip().strip(")")
         else:
             deceased = "0"
