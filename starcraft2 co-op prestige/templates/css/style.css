@@ -1,0 +1,12 @@
+@import "variables.css";
+table {
+  border: 2px solid var(--content_color);
+  border-spacing: 0px;
+}
+table td {
+  border: 1px solid var(--content_color);
+}
+body {
+  background-color: rgb(6, 0, 31);
+  color: var(--content_color);
+}

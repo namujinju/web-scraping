@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>COIVD-19 Global Result</title>
+    <style>
+      section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Results</h1>
+    <a href="/export">Export</a>
+    <section>
+      <h4>지역</h4>
+      <h4>국가</h4>
+      <h4>환자 발생 수</h4>
+      <h4>사망자 수</h4>
+      {% for data in datas %}
+      <span>{{data.continent}}</span>
+      <span>{{data.country}}</span>
+      <span>{{data.patient}}</span>
+      <span>{{data.deceased}}</span>
+      {% endfor %}
+    </section>
+  </body>
+</html>
