@@ -1,8 +1,6 @@
 from bs4 import BeautifulSoup
 import requests
 
-commander = "Jim_Raynor"
-
 
 def extract_prestiges(commander):
     URL = f"https://starcraft.fandom.com/wiki/{commander}_(Co-op_Missions)"
