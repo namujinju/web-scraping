@@ -3,11 +3,9 @@ import requests
 
 commander = "Jim_Raynor"
 
-URL = f"https://starcraft.fandom.com/wiki/{commander}_(Co-op_Missions)"
 
-
-def extract_prestiges():
-
+def extract_prestiges(commander):
+    URL = f"https://starcraft.fandom.com/wiki/{commander}_(Co-op_Missions)"
     result = requests.get(URL)
     soup = BeautifulSoup(result.text, "html.parser")
 
@@ -34,6 +32,3 @@ def extract_prestiges():
         dl = dl.next_sibling.next_sibling
 
     return prestiges_list
-
-
-print(extract_prestiges())

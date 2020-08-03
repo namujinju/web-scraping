@@ -5,7 +5,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Starcraft 2 Co-op Prestiges</title>
-    <style></style>
+    <style>
+      @import "variables.css";
+      :root {
+        --content_color: rgba(255, 255, 255, 0.829);
+      }
+
+      table {
+        border: 2px solid var(--content_color);
+        border-spacing: 0px;
+      }
+      table td {
+        border: 1px solid var(--content_color);
+      }
+      body {
+        background-color: rgb(6, 0, 31);
+        color: var(--content_color);
+      }
+    </style>
   </head>
   <body>
     <table>
@@ -14,6 +31,10 @@
         <td>Name</td>
         <td>Pros & Cons</td>
       </tr>
+
+      <!-- 사령관들 for문 -->
+      {% for prestiges in com_prestiges.values() %}
+
       <tr>
         <td rowspan="6">{{prestiges[0].commander}}</td>
         <td rowspan="2">{{prestiges[0].name}}</td>
@@ -36,6 +57,7 @@
       <tr>
         <td>{{prestiges[2].dis}}</td>
       </tr>
+      {% endfor %}
     </table>
   </body>
 </html>
